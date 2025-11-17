@@ -1,26 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #333;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS styles are included in the <head> for simplicity */
+
+        /* 1. Reset and Page Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Use flexbox to center the content perfectly */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* A soft, aesthetic gradient background */
+            background: linear-gradient(135deg, #ece9e6 0%, #ffffff 100%);
+            color: #333;
+        }
+
+        /* 2. The Main Content Card */
+        .lander-container {
+            text-align: center;
+            background: #ffffff;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            /* A subtle shadow for a "neat" card effect */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            /* Add a smooth transition for the hover effect */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* 3. Card Hover Effect (Optional but nice) */
+        .lander-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 4. Text Styling */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        /* 5. "Cooking" Animation (Pulsing Dots) */
+        .cooking-dots span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #bdc3c7;
+            border-radius: 50%;
+            margin: 0 5px;
+            
+            /* Attach the animation */
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+
+        /* Stagger the animation delay for each dot */
+        .cooking-dots span:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+
+        .cooking-dots span:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+
+        /* Define the animation */
+        @keyframes bounce {
+            0%, 80%, 100% {
+                transform: scale(0);
+            }
+            40% {
+                transform: scale(1.0);
+            }
+        }
+
+    </style>
 </head>
 <body>
-  <h1>Hello, Deepak Kumar welcomes you</h1>
+
+    <div class="lander-container">
+        <h1>Thanks for the visit!</h1>
+        <p>Something wonderful is cooking...</p>
+        <div class="cooking-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
 </body>
 </html>
